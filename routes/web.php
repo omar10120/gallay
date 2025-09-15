@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\ProductController;
 
-Route::get('/', function () {
-    return redirect()->route('admin.login');
-});
+// Public Routes
+Route::get('/', [App\Http\Controllers\ProductController::class, 'index'])->name('home');
+Route::get('/products/{product}', [App\Http\Controllers\ProductController::class, 'show'])->name('products.show');
 
 // Admin Authentication Routes
 Route::prefix('admin')->name('admin.')->group(function () {
