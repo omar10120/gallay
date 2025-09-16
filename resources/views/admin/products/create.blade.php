@@ -79,10 +79,41 @@
                 Cancel
             </a>
             <button type="submit" 
-                    class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">
-                <i class="fas fa-save mr-2"></i>Create Product
+                    id="submit-btn"
+                    class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed">
+                <i class="fas fa-save mr-2" id="save-icon"></i>
+                <span id="submit-text">Create Product</span>
+                <span id="loading-text" class="hidden">Creating...</span>
             </button>
         </div>
     </form>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    const submitBtn = document.getElementById('submit-btn');
+    const saveIcon = document.getElementById('save-icon');
+    const submitText = document.getElementById('submit-text');
+    const loadingText = document.getElementById('loading-text');
+    
+    form.addEventListener('submit', function() {
+        // Disable the submit button
+        submitBtn.disabled = true;
+        
+        // Change icon to loading spinner
+        saveIcon.className = 'fas fa-spinner fa-spin mr-2';
+        
+        // Hide submit text and show loading text
+        submitText.classList.add('hidden');
+        loadingText.classList.remove('hidden');
+        
+        // Optional: Disable all form inputs to prevent changes
+        const inputs = form.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.disabled = true;
+        });
+    });
+});
+</script>
 @endsection
