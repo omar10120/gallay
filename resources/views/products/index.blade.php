@@ -6,9 +6,7 @@
 <div id="gallery" class="py-12">
     <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-gray-800 mb-4">Ready-to-Deliver Products</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">
-            Discover our curated selection of beautiful images. Each piece is carefully selected to inspire and captivate.
-        </p>
+     
     </div>
 
     @if($products->count() > 0)
