@@ -80,10 +80,10 @@
         <!-- Product Information -->
         <div class="space-y-6">
             <div>
-                <h1 class="text-3xl font-bold text-gray-800 mb-4">{{ $product->name }}</h1>
-                <div class="flex items-center space-x-4 mb-6">
-                    <span class="text-3xl font-bold text-green-600">AED{{ number_format($product->price, 2) }}</span>
-                    <div class="flex items-center text-gray-600">
+                <h1 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-4">{{ $product->name }}</h1>
+                <div class="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-6">
+                    <span class="text-xl sm:text-2xl lg:text-3xl font-bold text-green-600">AED{{ number_format($product->price, 2) }}</span>
+                    <div class="flex items-center text-gray-600 text-sm sm:text-base">
                         <i class="fas fa-images mr-2"></i>
                         <span>{{ count($product->images ?? []) + ($product->image ? 1 : 0) }} image(s)</span>
                     </div>
@@ -122,7 +122,7 @@
             <!-- Back to Gallery -->
             <div class="pt-6 border-t border-gray-200">
                 <a href="{{ route('home') }}" 
-                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                   class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm sm:text-base">
                     <i class="fas fa-arrow-left mr-2"></i>Back to Gallery
                 </a>
             </div>
@@ -132,7 +132,7 @@
     <!-- Related Products Section -->
     @if($relatedProducts->count() > 0)
         <div class="mt-16">
-            <h2 class="text-2xl font-bold text-gray-800 mb-8">More Images</h2>
+            <h2 class="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 mb-8">More Images</h2>
             
             <!-- Slider Container -->
             <div class="relative">
@@ -168,10 +168,10 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="p-4">
-                                        <h3 class="font-semibold text-gray-800 mb-2">{{ $relatedProduct->name }}</h3>
+                                    <div class="p-3 sm:p-4">
+                                        <h3 class="font-semibold text-gray-800 mb-2 text-xs sm:text-sm">{{ $relatedProduct->name }}</h3>
                                         <a href="{{ route('products.show', $relatedProduct) }}" 
-                                           class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                           class="text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium">
                                             View Details
                                         </a>
                                     </div>

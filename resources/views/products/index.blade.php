@@ -33,13 +33,13 @@
                         @endif
                         
                         <!-- Price badge -->
-                        <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">
+                        <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-gray-800 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold">
                             AED{{ number_format($product->price, 2) }}
                         </div>
                     </div>
                     
-                    <div class="p-4">
-                        <h3 class="text-sm font-semibold text-gray-800 mb-1">{{ $product->name }}</h3>
+                    <div class="p-3 sm:p-4">
+                        <h3 class="text-xs sm:text-sm font-semibold text-gray-800 mb-1">{{ $product->name }}</h3>
                     </div>
                 </div>
             @endforeach
@@ -54,12 +54,12 @@
     @else
         <!-- Empty state -->
         <div class="text-center py-16">
-            <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i class="fas fa-images text-gray-400 text-3xl"></i>
+            <div class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-images text-gray-400 text-2xl sm:text-3xl"></i>
             </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">No Images Yet</h3>
-            <p class="text-gray-600 mb-6">Check back soon for our beautiful image collection!</p>
-            <a href="/admin/login" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">No Images Yet</h3>
+            <p class="text-gray-600 mb-6 text-sm sm:text-base">Check back soon for our beautiful image collection!</p>
+            <a href="/admin/login" class="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base">
                 <i class="fas fa-cog mr-2"></i>Admin Panel
             </a>
         </div>
