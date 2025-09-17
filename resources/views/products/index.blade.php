@@ -40,15 +40,15 @@
                         </div>
                     </div>
                     
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ $product->name }}</h3>
-                        <p class="text-gray-600 text-sm mb-4">
-                            {{ count($product->images ?? []) + ($product->image ? 1 : 0) }} beautiful image(s)
+                    <div class="p-4">
+                        <h3 class="text-sm font-semibold text-gray-800 mb-1">{{ $product->name }}</h3>
+                        <p class="text-gray-600 text-xs mb-3">
+                            {{ count($product->images ?? []) + ($product->image ? 1 : 0) }} image(s)
                         </p>
                         <a href="{{ route('products.show', $product) }}" 
-                           class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                           class="inline-flex items-center text-blue-600 hover:text-blue-800 text-xs font-medium">
                             View Details
-                            <i class="fas fa-arrow-right ml-2"></i>
+                            <i class="fas fa-arrow-right ml-1 text-xs"></i>
                         </a>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
         
         // Close on Escape key
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
+            if (e.key === 'Escape') {w
                 closeModal();
             }
         });
