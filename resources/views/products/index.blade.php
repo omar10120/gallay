@@ -5,21 +5,22 @@
 @section('content')
 <div id="gallery" class="py-12">
     <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Image Collection</h2>
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Ready-to-Deliver Products</h2>
         <p class="text-gray-600 max-w-2xl mx-auto">
             Discover our curated selection of beautiful images. Each piece is carefully selected to inspire and captivate.
         </p>
     </div>
 
     @if($products->count() > 0)
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             @foreach($products as $product)
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                     <div class="relative">
                         @if($product->image)
                             <img src="{{ asset('storage/' . $product->image) }}" 
                                  alt="{{ $product->name }}" 
-                                 class="w-full h-64 object-cover">
+                                 class="w-full h-64 object-cover cursor-pointer"
+                                 onclick="openImageModal('{{ asset('storage/' . $product->image) }}', '{{ $product->name }}')">
                         @else
                             <div class="w-full h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                                 <i class="fas fa-image text-gray-400 text-4xl"></i>
@@ -74,4 +75,68 @@
         </div>
     @endif
 </div>
+
+<!-- Image Modal Script -->
+<script>
+    function openImageModal(imageSrc, imageAlt) {
+        // Create modal overlay
+        const modal = document.createElement('div');
+        modal.className = 'fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4';
+        modal.style.backdropFilter = 'blur(4px)';
+        
+        // Create modal content
+        modal.innerHTML = `
+            <div class="relative max-w-7xl max-h-full w-full h-full flex items-center justify-center">
+                <img src="${imageSrc}" 
+                     alt="${imageAlt}" 
+                     class="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                     style="max-height: 90vh; max-width: 90vw;">
+                
+                <!-- Close button -->
+                <button class="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 transition-colors bg-black/50 rounded-full w-12 h-12 flex items-center justify-center">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <!-- Image info -->
+                <div class="absolute bottom-4 left-4 bg-black/50 text-white px-4 py-2 rounded-lg">
+                    <p class="text-sm">${imageAlt}</p>
+                </div>
+            </div>
+        `;
+        
+        // Add to body
+        document.body.appendChild(modal);
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        
+        // Close modal function
+        function closeModal() {
+            document.body.removeChild(modal);
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+        
+        // Close on overlay click
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        
+        // Close on button click
+        modal.querySelector('button').addEventListener('click', closeModal);
+        
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+        
+        // Add fade-in animation
+        modal.style.opacity = '0';
+        modal.style.transition = 'opacity 0.3s ease';
+        setTimeout(() => {
+            modal.style.opacity = '1';
+        }, 10);
+    }
+</script>
 @endsection

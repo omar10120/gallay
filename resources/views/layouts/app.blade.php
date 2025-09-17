@@ -21,9 +21,7 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <a href="{{ route('home') }}" class="flex items-center space-x-2">
-                        <div class="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
-                            <i class="fas fa-images text-white text-sm"></i>
-                        </div>
+                        <img src="{{ asset('storage/logo.png') }}" alt="Geally Logo" class="w-8 h-8 rounded-lg">
                         <span class="text-xl font-bold text-gray-800">Geally</span>
                     </a>
                 </div>
@@ -41,12 +39,10 @@
     @if(request()->routeIs('home'))
     <section class="gradient-bg py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
-                Discover Beautiful Products
-            </h1>
-            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Explore our curated collection of stunning images. Each piece tells a story and captures moments worth preserving.
-            </p>
+            <!-- <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                Ready-to-Deliver Products
+            </h1> -->
+         
             <div class="flex justify-center space-x-4">
                 <a href="#gallery" class="bg-white text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                     <i class="fas fa-images mr-2"></i>View Gallery
@@ -64,9 +60,9 @@
     </main>
 
     <!-- Footer -->
-    <!-- <footer class="bg-gray-800 text-white py-12 mt-16">
+    <footer class="bg-gray-800 text-white py-12 mt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
                         <div class="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
@@ -91,12 +87,12 @@
                         <i class="fas fa-envelope mr-2"></i>hello@geally.com
                     </p>
                 </div>
-            </div>
+            </div> -->
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; {{ date('Y') }} Geally. All rights reserved.</p>
+                <p>&copy; {{ date('Y') }} developer by techno code information technology L.L.C. All rights reserved.</p>
             </div>
         </div>
-    </footer> -->
+    </footer>
 
     <!-- Smooth scrolling script -->
     <script>

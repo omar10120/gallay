@@ -12,6 +12,7 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
+                    <img src="{{ asset('storage/logo.png') }}" alt="Geally Admin" class="h-8 w-auto mr-2">
                     <h1 class="text-xl font-bold text-gray-800">Geally Admin</h1>
                 </div>
                 <div class="flex items-center space-x-4">
