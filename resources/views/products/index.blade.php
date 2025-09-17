@@ -37,7 +37,7 @@
                         
                         <!-- Price badge -->
                         <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">
-                            UAE{{ number_format($product->price, 2) }}
+                            AED{{ number_format($product->price, 2) }}
                         </div>
                     </div>
                     

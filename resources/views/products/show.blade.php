@@ -82,7 +82,7 @@
             <div>
                 <h1 class="text-3xl font-bold text-gray-800 mb-4">{{ $product->name }}</h1>
                 <div class="flex items-center space-x-4 mb-6">
-                    <span class="text-3xl font-bold text-green-600">UAE{{ number_format($product->price, 2) }}</span>
+                    <span class="text-3xl font-bold text-green-600">AED{{ number_format($product->price, 2) }}</span>
                     <div class="flex items-center text-gray-600">
                         <i class="fas fa-images mr-2"></i>
                         <span>{{ count($product->images ?? []) + ($product->image ? 1 : 0) }} image(s)</span>
@@ -164,7 +164,7 @@
                                         @endif
                                         
                                         <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">
-                                            UAE{{ number_format($relatedProduct->price, 2) }}
+                                            AED{{ number_format($relatedProduct->price, 2) }}
                                         </div>
                                     </div>
                                     
