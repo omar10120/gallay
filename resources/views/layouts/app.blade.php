@@ -21,15 +21,15 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <a href="{{ route('home') }}" class="flex items-center space-x-2">
-                        <img src="{{ asset('storage/logo.png') }}" alt="Geally Logo" class="w-8 h-8 rounded-lg">
-                        <span class="text-xl font-bold text-gray-800">Geally</span>
+                        <img src="{{ asset('storage/logo.png') }}" alt="Geally Logo" class="w-12 h-8 rounded-lg">
+                        
                     </a>
                 </div>
                 <div class="flex items-center space-x-8">
                     <a href="{{ route('home') }}" class="text-gray-600 hover:text-gray-900 font-medium">Gallery</a>
-                    <a href="/admin/login" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition-colors">
+                    <!-- <a href="/admin/login" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition-colors">
                         <i class="fas fa-cog mr-2"></i>Admin
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>
