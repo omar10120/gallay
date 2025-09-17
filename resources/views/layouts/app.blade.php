@@ -36,21 +36,7 @@
     </nav>
 
     <!-- Hero Section (only on home page) -->
-    @if(request()->routeIs('home'))
-    <section class="gradient-bg py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <!-- <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
-                Ready-to-Deliver Products
-            </h1> -->
-         
-            <div class="flex justify-center space-x-4">
-                <a href="#gallery" class="bg-white text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    <i class="fas fa-images mr-2"></i>View Gallery
-                </a>
-            </div>
-        </div>
-    </section>
-    @endif
+ 
 
     <!-- Main Content -->
     <main class="@if(request()->routeIs('home')) -mt-10 @else py-8 @endif">
