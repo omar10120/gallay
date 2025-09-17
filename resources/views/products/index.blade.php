@@ -4,10 +4,7 @@
 
 @section('content')
 <div id="gallery" class="py-12">
-    <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Ready-to-Deliver Products</h2>
-     
-    </div>
+   
 
     @if($products->count() > 0)
         <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
