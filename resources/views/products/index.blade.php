@@ -43,11 +43,11 @@
 
                     <div class="px-4 pb-4 ">
                         <div class="rounded-lg mb-2 flex justify-around items-center h-full p-2" style="background-color: var(--color-primaryDark);">
-                            <div class="  text-[color:var(--color-creamDark)] font-semibold flex items-center">
+                            <div class="  text-[color:var(--color-creamDark)] font-semibold flex items-center text-xs sm:text-sm">
                                 <div class="uppercase tracking-wide">{{ number_format($product->price, 0) }} AED</div>
                                 <div class="opacity-90 text-sm">&nbsp;</div>
                             </div>
-                             <div class=" text-[color:var(--color-creamDark)] font-semibol flex items-center">
+                             <div class=" text-[color:var(--color-creamDark)] font-semibol flex items-center text-xs sm:text-sm">
                                     <div class="uppercase tracking-wide">{{ $product->name }}</div>
                                     <div class="opacity-90 text-sm">&nbsp;</div>
                                 </div>
