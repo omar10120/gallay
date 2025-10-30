@@ -2,7 +2,7 @@
   <ul class="flex flex-col gap-4">
     <li class="group relative">
       <div class="absolute inset-0 rounded-2xl blur-lg opacity-50 group-hover:opacity-90 transition" style="background: radial-gradient(60% 60% at 50% 50%, rgba(189,144,111,0.6), rgba(189,144,111,0.05));"></div>
-      <a href="#" aria-label="Instagram" class="relative block w-14 h-14 rounded-2xl overflow-hidden ring-2 ring-[color:var(--color-accent)]/50 shadow-[0_10px_25px_rgba(0,0,0,0.35)] hover:shadow-[0_14px_30px_rgba(189,144,111,0.45)] transition-transform hover:-translate-y-0.5"
+      <a href="https://www.instagram.com/mm8.market?igsh=MXF2YnNyb2JhZjlvdA%3D%3D&utm_source=qr" aria-label="Instagram" class="relative block w-14 h-14 rounded-2xl overflow-hidden ring-2 ring-[color:var(--color-accent)]/50 shadow-[0_10px_25px_rgba(0,0,0,0.35)] hover:shadow-[0_14px_30px_rgba(189,144,111,0.45)] transition-transform hover:-translate-y-0.5"
          style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);">
         <div class="absolute inset-0 backdrop-blur-[2px]"></div>
         <div class="relative w-full h-full grid place-items-center text-white text-2xl">
@@ -14,7 +14,7 @@
 
     <li class="group relative">
       <div class="absolute inset-0 rounded-2xl blur-lg opacity-40 group-hover:opacity-80 transition" style="background: radial-gradient(60% 60% at 50% 50%, rgba(255,252,0,0.6), rgba(255,252,0,0.05));"></div>
-      <a href="#" aria-label="Snapchat" class="relative block w-14 h-14 rounded-2xl overflow-hidden ring-2 ring-yellow-300/60 shadow-[0_10px_25px_rgba(0,0,0,0.35)] hover:shadow-[0_14px_30px_rgba(255,252,0,0.45)] transition-transform hover:-translate-y-0.5" style="background:#fffc00;">
+      <a href="https://snapchat.com/t/69d3OA9R" aria-label="Snapchat" class="relative block w-14 h-14 rounded-2xl overflow-hidden ring-2 ring-yellow-300/60 shadow-[0_10px_25px_rgba(0,0,0,0.35)] hover:shadow-[0_14px_30px_rgba(255,252,0,0.45)] transition-transform hover:-translate-y-0.5" style="background:#fffc00;">
         <div class="relative w-full h-full grid place-items-center text-black text-2xl">
           <i class="fa-brands fa-snapchat"></i>
         </div>

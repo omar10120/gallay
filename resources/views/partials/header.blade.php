@@ -58,11 +58,11 @@
                 </li>
                 <li class="flex flex-col items-center gap-2 transition-transform hover:-translate-y-0.5">
                     <i class="fa-brands fa-snapchat text-xl"></i>
-                    <a href="#" class="hover:text-[color:var(--color-accent)] text-sm">{{ __('header.snapchat') }}</a>
+                    <a href="https://snapchat.com/t/69d3OA9R" class="hover:text-[color:var(--color-accent)] text-sm">{{ __('header.snapchat') }}</a>
                 </li>
                 <li class="flex flex-col items-center gap-2 transition-transform hover:-translate-y-0.5">
                     <i class="fa-brands fa-instagram text-xl"></i>
-                    <a href="#" class="hover:text-[color:var(--color-accent)] text-sm">{{ __('header.instagram') }}</a>
+                    <a href="https://www.instagram.com/mm8.market?igsh=MXF2YnNyb2JhZjlvdA%3D%3D&utm_source=qr" class="hover:text-[color:var(--color-accent)] text-sm">{{ __('header.instagram') }}</a>
                 </li>
                 <li class="flex flex-col items-center gap-2 transition-transform hover:-translate-y-0.5">
                     <i class="fa-brands fa-whatsapp text-xl"></i>
@@ -101,10 +101,10 @@
                     <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition text-[color:var(--color-secondary)]">
                         <i class="fa-regular fa-envelope "></i><span>{{ __('header.email') }}</span>
                     </a>
-                    <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition text-[color:var(--color-secondary)]">
+                    <a href="https://snapchat.com/t/69d3OA9R" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition text-[color:var(--color-secondary)]">
                         <i class="fa-brands fa-snapchat"></i><span>{{ __('header.snapchat') }}</span>
                     </a>
-                    <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition text-[color:var(--color-secondary)]">
+                    <a href="https://www.instagram.com/mm8.market?igsh=MXF2YnNyb2JhZjlvdA%3D%3D&utm_source=qr" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition text-[color:var(--color-secondary)]">
                         <i class="fa-brands fa-instagram"></i><span>{{ __('header.instagram') }}</span>
                     </a>
                     <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition text-[color:var(--color-secondary)]">
