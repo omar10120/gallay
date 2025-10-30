@@ -74,6 +74,13 @@ return [
     'primaryImage' => 'الصورة الرئيسية',
     'additionalImages' => 'الصور الإضافية',
     'noImagesUploaded' => 'لا توجد صور مرفوعة',
+    'addSlide' => 'إضافة سلايدر',
+    'position' => 'الموضع',
+    'active' => 'الحالة',
+    'noSlides' => 'لا توجد سلايدرات.',
+    'yes' => 'نعم',
+    'no' => 'لا',
+    'product' => 'المنتج',
 ];
 
 

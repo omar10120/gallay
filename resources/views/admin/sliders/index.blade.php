@@ -3,22 +3,22 @@
 @section('title', __('admin.sliders'))
 
 @section('content')
-<div class="flex justify_between items-center mb-6">
-    <h2 class="text-2xl font-bold text-[color:var(--color-creamDark)]">Slider</h2>
+<div class="flex justify-between items-center mb-6">
+    <h2 class="text-2xl font-bold text-[color:var(--color-secondary)]">{{ __('admin.sliders') }}</h2>
     <a href="{{ route('admin.sliders.create') }}" class="bg-[color:var(--color-accent)] text-[color:var(--color-creamDark)] px-4 py-2 rounded-md hover:opacity-90">
-        <i class="fas fa-plus mr-2"></i>Add Slide
+        <i class="fas fa-plus mr-2"></i>{{ __('admin.addSlide') }}
     </a>
 </div>
 
 <div class="bg-[color:var(--color-primaryDark)] shadow-md rounded-lg overflow-hidden border border-[color:var(--color-secondaryDark)]/40">
     <table class="min-w-full">
-        <thead class="bg-[color:var(--color-primary)] text-[color:var(--color-creamDark)]">
+        <thead class="bg-[color:var(--color-primary)] text-[color:var(--color-secondary)]">
             <tr>
-                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Image</th>
-                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Product</th>
-                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Position</th>
-                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Active</th>
-                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Actions</th>
+                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">{{ __('admin.image') }}</th>
+                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">{{ __('admin.product') }}</th>
+                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">{{ __('admin.position') }}</th>
+                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">{{ __('admin.active') }}</th>
+                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">{{ __('admin.actions') }}</th>
             </tr>
         </thead>
         <tbody class="divide-y divide-[color:var(--color-secondaryDark)]/30 text-[color:var(--color-creamDark)]">
@@ -31,7 +31,7 @@
                 </td>
                 <td class="px-6 py-4">{{ $item->product?->name }}</td>
                 <td class="px-6 py-4">{{ $item->position }}</td>
-                <td class="px-6 py-4">{{ $item->is_active ? 'Yes' : 'No' }}</td>
+                <td class="px-6 py-4">{{ $item->is_active ? __('admin.yes') : __('admin.no') }}</td>
                 <td class="px-6 py-4">
                     <form method="POST" action="{{ route('admin.sliders.destroy', $item) }}" onsubmit="return confirm('Remove this slide?')">
                         @csrf
@@ -41,7 +41,7 @@
                 </td>
             </tr>
             @empty
-            <tr><td colspan="5" class="px-6 py-6 text-center opacity-70">No slides.</td></tr>
+            <tr><td colspan="5" class="px-6 py-6 text-center opacity-70">{{ __('admin.noSlides') }}</td></tr>
             @endforelse
         </tbody>
     </table>

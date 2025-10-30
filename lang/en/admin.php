@@ -62,6 +62,13 @@ return [
     'primaryImage' => 'Primary Image',
     'additionalImages' => 'Additional Images',
     'noImagesUploaded' => 'No Images Uploaded',
+    'addSlide' => 'Add Slide',
+    'position' => 'Position',
+    'active' => 'Active',
+    'noSlides' => 'No Slides.',
+    'yes' => 'Yes',
+    'no' => 'No',
+    'product' => 'Product',
 ];
 
 
