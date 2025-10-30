@@ -32,7 +32,7 @@
                             <a href="tel:#" class="w-11 h-11 rounded-full bg-white/90 backdrop-blur ring-2 ring-[color:var(--color-accent)]/50 shadow flex items-center justify-center text-[color:var(--color-primaryDark)] hover:scale-105 transition">
                                 <i class="fa-solid fa-phone"></i>
                             </a>
-                            <a href="#" class="w-11 h-11 rounded-full bg-white/90 backdrop-blur ring-2 ring-[color:var(--color-accent)]/50 shadow flex items-center justify-center text-green-600 hover:scale-105 transition">
+                            <a href="https://wa.me/+8613610009048" target="_blank" class="w-11 h-11 rounded-full bg-white/90 backdrop-blur ring-2 ring-[color:var(--color-accent)]/50 shadow flex items-center justify-center text-green-600 hover:scale-105 transition">
                                 <i class="fa-brands fa-whatsapp"></i>
                             </a>
                             <a href="#" class="w-11 h-11 rounded-full bg-white/90 backdrop-blur ring-2 ring-[color:var(--color-accent)]/50 shadow flex items-center justify-center text-[color:var(--color-primaryDark)] hover:scale-105 transition">

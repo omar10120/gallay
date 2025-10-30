@@ -17,7 +17,7 @@
             </a>
         </li>
         <li>
-            <a href="#" class="block w-14 h-14 rounded-xl shadow-xl border border-black/60 overflow-hidden transition transform hover:scale-105"
+            <a href="https://wa.me/+8613610009048" target="_blank" class="block w-14 h-14 rounded-xl shadow-xl border border-black/60 overflow-hidden transition transform hover:scale-105"
                style="background: #25D366;">
                 <div class="w-full h-full grid place-items-center text-white text-2xl">
                     <i class="fa-brands fa-whatsapp"></i>

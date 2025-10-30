@@ -58,7 +58,7 @@
                 </li>
                 <li class="flex flex-col items-center gap-2 transition-transform hover:-translate-y-0.5">
                     <i class="fa-brands fa-whatsapp text-xl"></i>
-                    <a href="#" class="hover:text-[color:var(--color-accent)] text-sm">{{ __('header.whatsapp') }}</a>
+                    <a href="https://wa.me/+8613610009048" target="_blank" class="hover:text-[color:var(--color-accent)] text-sm">{{ __('header.whatsapp') }}</a>
                 </li>
             
                 <li class="flex flex-col items-center gap-2 transition-transform hover:-translate-y-0.5">
