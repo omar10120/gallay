@@ -5,6 +5,7 @@ return [
     'products' => 'المنتجات',
     'categories' => 'التصنيفات',
     'viewSite' => 'عرض الموقع',
+    'sliders' => 'السلايدرات',
     'logout' => 'تسجيل الخروج',
     'addProduct' => 'إضافة منتج جديد',
     'addCategory' => 'إضافة تصنيف',

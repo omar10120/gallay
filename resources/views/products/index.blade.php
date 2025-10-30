@@ -5,10 +5,10 @@
 @section('content')
 <div id="gallery" class="py-12">
     @include('partials.categories', ['categories' => $categories ?? []])
-    <div class="h-6"></div>
+    <div class="h-12"></div>
     @if(isset($sliderProducts) && $sliderProducts->count() > 0)
         @include('partials.carousel', ['products' => $sliderProducts])
-        <div class="h-8"></div>
+        <div class="h-12"></div>
     @endif
    
 
