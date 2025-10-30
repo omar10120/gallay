@@ -43,7 +43,7 @@
 
                     <div class="px-4 pb-4 ">
                       <div class="flex justify-between items-cente gap-2 bg-[color:var(--color-primaryDark)] rounded-lg p-2">
-                        <div class="text-xs sm:text-sm text-[color:var(--color-creamDark)]">
+                        <div class="text-xs sm:text-sm text-[color:var(--color-creamDark)]  w-2/3 overflow-hidden text-ellipsis whitespace-nowrap">
                             {{ $product->name }}
                         </div>
                         <div class="text-xs sm:text-sm text-[color:var(--color-creamDark)]">
