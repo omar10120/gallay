@@ -29,7 +29,7 @@
                         @if($product->image)
                             <img src="{{ asset('storage/' . $product->image) }}" 
                                  alt="{{ $product->name }}" 
-                                 class="h-12 w-12 rounded-lg object-cover">
+                                 class="h-12 w-12 rounded-lg object-fit">
                         @else
                             <div class="h-12 w-12 bg-[color:var(--color-primary)]/40 rounded-lg flex items-center justify-center">
                                 <i class="fas fa-image text-[color:var(--color-creamDark)]/60"></i>
@@ -85,7 +85,7 @@
                     @if($product->image)
                         <img src="{{ asset('storage/' . $product->image) }}" 
                              alt="{{ $product->name }}" 
-                             class="h-16 w-16 rounded-lg object-cover">
+                             class="h-16 w-16 rounded-lg object-fit">
                     @else
                         <div class="h-16 w-16 bg-[color:var(--color-primary)]/40 rounded-lg flex items-center justify-center">
                             <i class="fas fa-image text-[color:var(--color-creamDark)]/60"></i>

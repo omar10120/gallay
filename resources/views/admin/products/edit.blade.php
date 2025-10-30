@@ -67,7 +67,7 @@
                 <div class="mb-4">
                     <img src="{{ asset('storage/' . $product->image) }}" 
                          alt="{{ $product->name }}" 
-                         class="h-32 w-32 rounded-lg object-cover">
+                         class="h-32 w-32 rounded-lg object-fit">
                     <p class="text-sm text-[color:var(--color-creamDark)]/70 mt-1">Current primary image</p>
                 </div>
             @endif

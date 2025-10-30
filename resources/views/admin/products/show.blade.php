@@ -28,7 +28,7 @@
                     <h4 class="text-md font-medium text-[color:var(--color-creamDark)] mb-2">{{ __('admin.primaryImage') }}</h4>
                     <img src="{{ asset('storage/' . $product->image) }}" 
                          alt="{{ $product->name }}" 
-                         class="w-full h-64 rounded-lg object-cover">
+                         class="w-full h-64 rounded-lg object-fit">
                 </div>
             @endif
 
@@ -39,7 +39,7 @@
                         @foreach($product->images as $image)
                             <img src="{{ asset('storage/' . $image) }}" 
                                  alt="{{ $product->name }}" 
-                                 class="w-full h-32 rounded-lg object-cover">
+                                 class="w-full h-32 rounded-lg object-fit">
                         @endforeach
                     </div>
                 </div>

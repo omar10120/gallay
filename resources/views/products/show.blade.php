@@ -21,7 +21,7 @@
                 <div class="relative group cursor-pointer" onclick="openImageModal('{{ asset('storage/' . $product->image) }}', '{{ $product->name }}')">
                     <img src="{{ asset('storage/' . $product->image) }}" 
                          alt="{{ $product->name }}" 
-                         class="w-full h-96 object-cover rounded-xl shadow-lg">
+                         class="w-full h-96 object-fit rounded-xl shadow-lg">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 rounded-xl flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <i class="fas fa-expand text-white text-2xl"></i>
@@ -54,7 +54,7 @@
                                     <div class="relative group cursor-pointer" onclick="openImageModal('{{ asset('storage/' . $image) }}', '{{ $product->name }}')">
                                         <img src="{{ asset('storage/' . $image) }}" 
                                              alt="{{ $product->name }}" 
-                                             class="w-full h-24 object-cover rounded-lg shadow-md">
+                                             class="w-full h-24 object-fit rounded-lg shadow-md">
                                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 rounded-lg flex items-center justify-center">
                                             <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                                 <i class="fas fa-expand text-white text-lg"></i>
@@ -155,7 +155,7 @@
                                         @if($relatedProduct->image)
                                             <img src="{{ asset('storage/' . $relatedProduct->image) }}" 
                                                  alt="{{ $relatedProduct->name }}" 
-                                                 class="w-full h-48 object-cover cursor-pointer"
+                                                 class="w-full h-48 object-fit cursor-pointer"
                                                  onclick="openImageModal('{{ asset('storage/' . $relatedProduct->image) }}', '{{ $relatedProduct->name }}')">
                                         @else
                                             <div class="w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">

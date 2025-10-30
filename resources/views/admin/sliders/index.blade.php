@@ -26,7 +26,7 @@
             <tr>
                 <td class="px-6 py-4">
                     @if($item->product && $item->product->image)
-                        <img src="{{ asset('storage/'.$item->product->image) }}" class="h-12 w-12 rounded object-cover" alt="">
+                        <img src="{{ asset('storage/'.$item->product->image) }}" class="h-12 w-12 rounded object-fit" alt="">
                     @endif
                 </td>
                 <td class="px-6 py-4">{{ $item->product?->name }}</td>
