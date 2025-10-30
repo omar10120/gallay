@@ -4,9 +4,9 @@
 
 @section('content')
 <div class="flex justify-between items-center mb-6">
-    <h2 class="text-2xl font-bold text-[color:var(--color-secondary)]">{{ __('admin.products') }}</h2>
+    <h2 class="text-2xl font-bold text-[color:var(--color-creamDark)]">{{ __('admin.products') }}</h2>
     <a href="{{ route('admin.products.create') }}" 
-       class="bg-[color:var(--color-accent)] text-[color:var(--color-secondary)] px-4 py-2 rounded-md hover:opacity-90">
+       class="bg-[color:var(--color-accent)] text-[color:var(--color-creamDark)] px-4 py-2 rounded-md hover:opacity-90">
         <i class="fas fa-plus mr-2"></i>{{ __('admin.addProduct') }}
     </a>
 </div>

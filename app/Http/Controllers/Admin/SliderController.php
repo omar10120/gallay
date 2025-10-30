@@ -11,7 +11,7 @@ class SliderController extends Controller
 {
     public function index()
     {
-        $items = Slider::with('product')->orderBy('position')->get();
+        $items = Slider::with('product')->orderBy('position')->paginate(12);
         return view('admin.sliders.index', compact('items'));
     }
 

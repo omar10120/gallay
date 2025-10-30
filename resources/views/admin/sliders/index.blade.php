@@ -46,6 +46,11 @@
         </tbody>
     </table>
 </div>
+@if($items->hasPages())
+  <div class="mt-6">
+    {{ $items->links() }}
+  </div>
+@endif
 @endsection
 
 

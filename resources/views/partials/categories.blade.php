@@ -13,11 +13,11 @@
             @php($isActive = ($cat === 'All' && ($active==='All' || !$active)) || ($slugify($cat) === strtolower($active)))
             @php($param = $cat === 'All' ? null : $slugify($cat))
             <a href="{{ $param ? url()->current() . '?category=' . $param : url()->current() }}"
-               class="px-4 py-2 rounded-md border transition font-medium"
+               class="relative px-4 py-2 rounded-lg border font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:ring-2 hover:ring-[color:var(--color-accent)]/60 backdrop-blur-sm"
                style="
                     border-color: var(--color-accent);
                     color: {{ $isActive ? 'var(--color-creamDark)' : 'var(--color-creamDark)' }};
-                    background: {{ $isActive ? 'var(--color-accent)' : 'transparent' }};
+                    background: {{ $isActive ? 'var(--color-accent)' : 'rgba(0,0,0,0.08)' }};
                "
             >
                 {{ $cat }}

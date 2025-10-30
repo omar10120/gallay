@@ -31,9 +31,17 @@
             </div>
 
             <!-- Mobile hamburger -->
-            <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-[color:var(--color-secondaryDark)]/40 text-[color:var(--color-secondary)] hover:bg-[color:var(--color-primary)] transition">
-                <svg id="hamburgerIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <button id="mobileMenuBtn" aria-expanded="false" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-[color:var(--color-secondaryDark)]/40 text-[color:var(--color-secondary)] hover:bg-[color:var(--color-primary)] transition">
+                <svg id="hamburgerIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24">
+                    <g id="icon-ham" class="transition-all duration-300 origin-center">
+                        <rect x="4" y="6" width="16" height="2" rx="1" fill="currentColor"></rect>
+                        <rect x="4" y="11" width="16" height="2" rx="1" fill="currentColor"></rect>
+                        <rect x="4" y="16" width="16" height="2" rx="1" fill="currentColor"></rect>
+                    </g>
+                    <g id="icon-close" class="transition-all duration-300 origin-center scale-0 rotate-45">
+                        <rect x="5" y="11" width="14" height="2" rx="1" fill="currentColor"></rect>
+                        <rect x="5" y="11" width="14" height="2" rx="1" fill="currentColor" transform="rotate(90 12 12)"></rect>
+                    </g>
                 </svg>
             </button>
         </div>
@@ -88,7 +96,7 @@
             </ul>
 
             <!-- Mobile menu panel -->
-            <div id="mobileMenuPanel" class="md:hidden hidden mt-3 rounded-xl border border-[color:var(--color-secondaryDark)]/30 bg-[color:var(--color-primaryDark)]/80 backdrop-blur p-3 text-[color:var(--color-secondary)]">
+            <div id="mobileMenuPanel" class="md:hidden pointer-events-none opacity-0 -translate-y-2 mt-3 rounded-xl border border-[color:var(--color-secondaryDark)]/30 bg-[color:var(--color-primaryDark)]/95 backdrop-blur p-3 text-[color:var(--color-secondary)] transition-all duration-300">
                 <div class="grid grid-cols-4 gap-3 text-center text-xs">
                     <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition text-[color:var(--color-secondary)]">
                         <i class="fa-regular fa-envelope "></i><span>{{ __('header.email') }}</span>
@@ -128,9 +136,29 @@
 document.addEventListener('DOMContentLoaded', function(){
   const btn = document.getElementById('mobileMenuBtn');
   const panel = document.getElementById('mobileMenuPanel');
+  const ham = document.getElementById('icon-ham');
+  const closeIc = document.getElementById('icon-close');
   if(!btn || !panel) return;
+  const open = () => {
+    btn.setAttribute('aria-expanded', 'true');
+    panel.classList.remove('pointer-events-none','opacity-0','-translate-y-2');
+    panel.classList.add('pointer-events-auto','opacity-100','translate-y-0');
+    ham.classList.add('scale-0','-rotate-45');
+    closeIc.classList.remove('scale-0');
+    closeIc.classList.add('scale-100');
+  };
+  const close = () => {
+    btn.setAttribute('aria-expanded', 'false');
+    panel.classList.add('pointer-events-none','opacity-0','-translate-y-2');
+    panel.classList.remove('pointer-events-auto','opacity-100','translate-y-0');
+    ham.classList.remove('scale-0','-rotate-45');
+    closeIc.classList.add('scale-0');
+    closeIc.classList.remove('scale-100');
+  };
+  let isOpen = false;
   btn.addEventListener('click', () => {
-    panel.classList.toggle('hidden');
+    isOpen ? close() : open();
+    isOpen = !isOpen;
   });
 });
 </script>
