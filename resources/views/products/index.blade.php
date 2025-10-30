@@ -15,7 +15,7 @@
     @if($products->count() > 0)
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             @foreach($products as $product)
-                <div class="" style=" background: rgba(0,0,0,0.06);">
+                <div class="" style=" ">
                     <div class="relative group m-2 rounded-xl overflow-hidden" style="background: rgba(0,0,0,0.08);">
                         <!-- <a href="{{ route('products.show', $product) }}" class="block"> -->
                             @if($product->image)
