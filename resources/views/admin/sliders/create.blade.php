@@ -14,7 +14,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
                 <label class="block text-sm mb-2">Product *</label>
-                <select name="product_id" class="w-full px-3 py-2 rounded border border-[color:var(--color-secondaryDark)]/40 bg-transparent text-[color:var(--color-creamDark)]">
+                <select name="product_id" class="w-full px-3 py-2 rounded border border-[color:var(--color-secondaryDark)]/40 bg-transparent text-[color:var(--color-secondary)]">
                     @foreach($products as $p)
                         <option value="{{ $p->id }}">{{ $p->name }}</option>
                     @endforeach
@@ -23,7 +23,7 @@
             </div>
             <div>
                 <label class="block text-sm mb-2">Position</label>
-                <input type="number" name="position" value="0" class="w-full px-3 py-2 rounded border border-[color:var(--color-secondaryDark)]/40 bg-transparent text-[color:var(--color-creamDark)]" />
+                <input type="number" name="position" value="0" class="w-full px-3 py-2 rounded border border-[color:var(--color-secondaryDark)]/40 bg-transparent text-[color:var(--color-secondary)]" />
             </div>
         </div>
         <div class="mt-4 flex items-center gap-2">

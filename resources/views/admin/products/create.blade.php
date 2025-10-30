@@ -4,9 +4,9 @@
 
 @section('content')
 <div class="flex justify-between items-center mb-6">
-    <h2 class="text-2xl font-bold text-[color:var(--color-creamDark)]">{{ __('admin.createNewProduct') }}</h2>
+    <h2 class="text-2xl font-bold text-[color:var(--color-secondary)]">{{ __('admin.createNewProduct') }}</h2>
     <a href="{{ route('admin.products.index') }}" 
-       class="bg-[color:var(--color-primary)] text-[color:var(--color-creamDark)] px-4 py-2 rounded-md hover:bg-[color:var(--color-accent)]">
+       class="bg-[color:var(--color-primary)] text-[color:var(--color-secondary)] px-4 py-2 rounded-md hover:bg-[color:var(--color-accent)]">
         <i class="fas fa-arrow-left mr-2"></i>{{ __('admin.backToProducts') }}
     </a>
 </div>
@@ -17,12 +17,12 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-                <label for="name" class="block text-sm font-medium text-[color:var(--color-creamDark)] mb-2">{{ __('admin.productName') }} *</label>
+                <label for="name" class="block text-sm font-medium text-[color:var(--color-secondary)] mb-2">{{ __('admin.productName') }} *</label>
                 <input type="text" 
                        id="name" 
                        name="name" 
                        value="{{ old('name') }}"
-                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 @error('name') border-red-500 @enderror"
+                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 @error('name') border-red-500 @enderror bg-[color:var(--color-primaryDark)] text-[color:var(--color-secondary)]"
                        placeholder="{{ __('admin.enterProductName') }}"
                        required>
                 @error('name')
@@ -31,14 +31,14 @@
             </div>
 
             <div>
-                <label for="price" class="block text-sm font-medium text-[color:var(--color-creamDark)] mb-2">{{ __('admin.price') }} *</label>
+                <label for="price" class="block text-sm font-medium text-[color:var(--color-secondary)] mb-2">{{ __('admin.price') }} *</label>
                 <input type="number" 
                        id="price" 
                        name="price" 
                        value="{{ old('price') }}"
                        step="0.01"
                        min="0"
-                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 @error('price') border-red-500 @enderror"
+                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 @error('price') border-red-500 @enderror bg-[color:var(--color-primaryDark)] text-[color:var(--color-secondary)]"
                        placeholder="{{ __('admin.enterPrice') }}"
                        required>
                 @error('price')
@@ -47,8 +47,8 @@
             </div>
 
             <div>
-                <label for="category_id" class="block text-sm font-medium text-[color:var(--color-creamDark)] mb-2">{{ __('admin.category') }}</label>
-                <select id="category_id" name="category_id" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <label for="category_id" class="block text-sm font-medium text-[color:var(--color-secondary)] mb-2">{{ __('admin.category') }}</label>
+                <select id="category_id" name="category_id" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-[color:var(--color-primaryDark)] text-[color:var(--color-secondary)]">
                     <option value="">{{ __('admin.none') }}</option>
                     @foreach($categories as $cat)
                         <option value="{{ $cat->id }}" @selected(old('category_id')==$cat->id)>{{ $cat->name }}</option>
@@ -61,12 +61,12 @@
         </div>
 
         <div class="mt-6">
-            <label for="image" class="block text-sm font-medium text-[color:var(--color-creamDark)] mb-2">{{ __('admin.primaryImage') }}</label>
+            <label for="image" class="block text-sm font-medium text-[color:var(--color-secondary)] mb-2">{{ __('admin.primaryImage') }}</label>
             <input type="file" 
                    id="image" 
                    name="image" 
                    accept="image/*"
-                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 @error('image') border-red-500 @enderror">
+                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 @error('image') border-red-500 @enderror bg-[color:var(--color-primaryDark)] text-[color:var(--color-secondary)]">
             @error('image')
                 <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
             @enderror
@@ -76,7 +76,7 @@
 
         <div class="mt-8 flex justify-end space-x-4">
             <a href="{{ route('admin.products.index') }}" 
-               class="bg-[color:var(--color-primary)] text-[color:var(--color-creamDark)] px-6 py-2 rounded-md hover:bg-[color:var(--color-accent)]">
+               class="bg-[color:var(--color-primary)] text-[color:var(--color-secondary)] px-6 py-2 rounded-md hover:bg-[color:var(--color-accent)]">
                 {{ __('admin.cancel') }}
             </a>
             <button type="submit" 

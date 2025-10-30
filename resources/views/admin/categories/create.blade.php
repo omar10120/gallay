@@ -14,12 +14,12 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
                 <label for="name" class="block text-sm font-medium text-[color:var(--color-creamDark)] mb-2">{{ __('admin.name') }} *</label>
-                <input id="name" name="name" type="text" value="{{ old('name') }}" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 @error('name') border-red-500 @enderror" required>
+                <input id="name" name="name" type="text" value="{{ old('name') }}" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 @error('name') border-red-500 @enderror bg-[color:var(--color-primaryDark)] text-[color:var(--color-secondary)]" required>
                 @error('name')<p class="mt-1 text-sm text-red-600">{{ $message }}</p>@enderror
             </div>
             <div>
                 <label for="slug" class="block text-sm font-medium text-[color:var(--color-creamDark)] mb-2">{{ __('admin.slug') }}</label>
-                <input id="slug" name="slug" type="text" value="{{ old('slug') }}" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 @error('slug') border-red-500 @enderror" placeholder="auto if empty">
+                <input id="slug" name="slug" type="text" value="{{ old('slug') }}" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 @error('slug') border-red-500 @enderror bg-[color:var(--color-primaryDark)] text-[color:var(--color-secondary)]" placeholder="auto if empty">
                 @error('slug')<p class="mt-1 text-sm text-red-600">{{ $message }}</p>@enderror
             </div>
         </div>
