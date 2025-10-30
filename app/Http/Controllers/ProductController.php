@@ -27,9 +27,18 @@ class ProductController extends Controller
 
         $products = $query->paginate(12)->withQueryString();
         $categoryNames = \App\Models\Category::orderBy('name')->pluck('name')->toArray();
+
+        $sliderItems = \App\Models\Slider::with(['product' => function($q){ $q->latest(); }])
+            ->where('is_active', true)
+            ->orderBy('position')
+            ->get()
+            ->pluck('product')
+            ->filter();
+
         return view('products.index', [
             'products' => $products,
             'categories' => $categoryNames,
+            'sliderProducts' => $sliderItems,
         ]);
     }
 

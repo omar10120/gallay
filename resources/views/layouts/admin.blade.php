@@ -40,9 +40,11 @@
                 <div class="flex items-center gap-4">
                     <a href="{{ route('admin.products.index') }}" class="hover:text-[color:var(--color-accent)]">{{ __('admin.products') }}</a>
                     <a href="{{ route('admin.categories.index') }}" class="hover:text-[color:var(--color-accent)]">{{ __('admin.categories') }}</a>
+                    <a href="{{ route('admin.sliders.index') }}" class="hover:text-[color:var(--color-accent)]">{{ __('admin.sliders') }}</a>
                     <a href="{{ route('home') }}" class="hover:text-[color:var(--color-accent)]" target="_blank">
                         <i class="fas fa-external-link-alt mr-1"></i>{{ __('admin.viewSite') }}
                     </a>
+                    
                     <div class="relative group">
                         <button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-[color:var(--color-secondaryDark)]/40 hover:bg-[color:var(--color-primary)]">
                             <i class="fa-solid fa-globe"></i>

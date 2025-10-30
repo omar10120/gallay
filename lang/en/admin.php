@@ -6,6 +6,7 @@ return [
     'categories' => 'Categories',
     'viewSite' => 'View Site',
     'logout' => 'Logout',
+    'sliders' => 'Sliders',
     'addProduct' => 'Add Product',
     'addCategory' => 'Add Category',
     'image' => 'Image',

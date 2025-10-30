@@ -6,8 +6,8 @@
 <div id="gallery" class="py-12">
     @include('partials.categories', ['categories' => $categories ?? []])
     <div class="h-6"></div>
-    @if($products->count() > 0)
-        @include('partials.carousel', ['products' => $products])
+    @if(isset($sliderProducts) && $sliderProducts->count() > 0)
+        @include('partials.carousel', ['products' => $sliderProducts])
         <div class="h-8"></div>
     @endif
    
@@ -19,7 +19,7 @@
                     <div class="relative group m-2 rounded-xl overflow-hidden" style="background: rgba(0,0,0,0.08);">
                         <!-- <a href="{{ route('products.show', $product) }}" class="block"> -->
                             @if($product->image)
-                                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-[400px] object-cover" />
+                                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-[400px] object-fit" />
                             @else
                                 <div class="w-full h-[460px] bg-[color:var(--color-primary)]/30 flex items-center justify-center">
                                     <i class="fas fa-image text-4xl text-[color:var(--color-secondaryDark)]"></i>
