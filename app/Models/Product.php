@@ -10,23 +10,19 @@ class Product extends Model
     
     protected $fillable = [
         'name',
-        'images',
         'price',
-        'image'
+        'image',
+        'category_id'
     ];
 
     protected $casts = [
-        'images' => 'array',
         'price' => 'decimal:2'
     ];
 
-    public function getImagesAttribute($value)
-    {
-        return $value ? json_decode($value, true) : [];
-    }
+    // Additional images removed
 
-    public function setImagesAttribute($value)
+    public function category()
     {
-        $this->attributes['images'] = is_array($value) ? json_encode($value) : $value;
+        return $this->belongsTo(Category::class);
     }
 }

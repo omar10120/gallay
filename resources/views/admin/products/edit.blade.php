@@ -1,24 +1,24 @@
 @extends('layouts.admin')
 
-@section('title', 'Edit Product - Geally Admin')
+@section('title', 'Edit Product - FastMenu Admin')
 
 @section('content')
 <div class="flex justify-between items-center mb-6">
-    <h2 class="text-2xl font-bold text-gray-800">Edit Product</h2>
+    <h2 class="text-2xl font-bold text-[color:var(--color-creamDark)]">Edit Product</h2>
     <a href="{{ route('admin.products.index') }}" 
-       class="bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700">
+       class="bg-[color:var(--color-primary)] text-[color:var(--color-creamDark)] px-4 py-2 rounded-md hover:bg-[color:var(--color-accent)]">
         <i class="fas fa-arrow-left mr-2"></i>Back to Products
     </a>
 </div>
 
-<div class="bg-white shadow-md rounded-lg p-6">
+<div class="bg-[color:var(--color-primaryDark)] shadow-md rounded-lg p-6 border border-[color:var(--color-secondaryDark)]/40">
     <form method="POST" action="{{ route('admin.products.update', $product) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Product Name *</label>
+                <label for="name" class="block text-sm font-medium text-[color:var(--color-creamDark)] mb-2">Product Name *</label>
                 <input type="text" 
                        id="name" 
                        name="name" 
@@ -32,7 +32,7 @@
             </div>
 
             <div>
-                <label for="price" class="block text-sm font-medium text-gray-700 mb-2">Price *</label>
+                <label for="price" class="block text-sm font-medium text-[color:var(--color-creamDark)] mb-2">Price *</label>
                 <input type="number" 
                        id="price" 
                        name="price" 
@@ -46,16 +46,29 @@
                     <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                 @enderror
             </div>
+
+            <div>
+                <label for="category_id" class="block text-sm font-medium text-[color:var(--color-creamDark)] mb-2">Category</label>
+                <select id="category_id" name="category_id" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="">-- None --</option>
+                    @foreach($categories as $cat)
+                        <option value="{{ $cat->id }}" @selected(old('category_id', $product->category_id)==$cat->id)>{{ $cat->name }}</option>
+                    @endforeach
+                </select>
+                @error('category_id')
+                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
         </div>
 
         <div class="mt-6">
-            <label for="image" class="block text-sm font-medium text-gray-700 mb-2">Primary Image</label>
+            <label for="image" class="block text-sm font-medium text-[color:var(--color-creamDark)] mb-2">Primary Image</label>
             @if($product->image)
                 <div class="mb-4">
                     <img src="{{ asset('storage/' . $product->image) }}" 
                          alt="{{ $product->name }}" 
                          class="h-32 w-32 rounded-lg object-cover">
-                    <p class="text-sm text-gray-500 mt-1">Current primary image</p>
+                    <p class="text-sm text-[color:var(--color-creamDark)]/70 mt-1">Current primary image</p>
                 </div>
             @endif
             <input type="file" 
@@ -63,45 +76,21 @@
                    name="image" 
                    accept="image/*"
                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 @error('image') border-red-500 @enderror">
-            <p class="mt-1 text-sm text-gray-500">Leave empty to keep current image</p>
+            <p class="mt-1 text-sm text-[color:var(--color-creamDark)]/70">Leave empty to keep current image</p>
             @error('image')
                 <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
             @enderror
         </div>
 
-        <div class="mt-6">
-            <label for="images" class="block text-sm font-medium text-gray-700 mb-2">Additional Images</label>
-            @if($product->images && count($product->images) > 0)
-                <div class="mb-4">
-                    <div class="grid grid-cols-4 gap-4">
-                        @foreach($product->images as $image)
-                            <img src="{{ asset('storage/' . $image) }}" 
-                                 alt="{{ $product->name }}" 
-                                 class="h-24 w-24 rounded-lg object-cover">
-                        @endforeach
-                    </div>
-                    <p class="text-sm text-gray-500 mt-1">Current additional images</p>
-                </div>
-            @endif
-            <input type="file" 
-                   id="images" 
-                   name="images[]" 
-                   accept="image/*"
-                   multiple
-                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 @error('images.*') border-red-500 @enderror">
-            <p class="mt-1 text-sm text-gray-500">Select new images to replace current ones</p>
-            @error('images.*')
-                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
-            @enderror
-        </div>
+        
 
         <div class="mt-8 flex justify-end space-x-4">
             <a href="{{ route('admin.products.index') }}" 
-               class="bg-gray-300 text-gray-700 px-6 py-2 rounded-md hover:bg-gray-400">
+               class="bg-[color:var(--color-primary)] text-[color:var(--color-creamDark)] px-6 py-2 rounded-md hover:bg-[color:var(--color-accent)]">
                 Cancel
             </a>
             <button type="submit" 
-                    class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">
+                    class="bg-[color:var(--color-accent)] text-[color:var(--color-primaryDark)] px-6 py-2 rounded-md hover:bg-[color:var(--color-accentDark)]">
                 <i class="fas fa-save mr-2"></i>Update Product
             </button>
         </div>

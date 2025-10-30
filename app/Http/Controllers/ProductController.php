@@ -12,8 +12,25 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::latest()->paginate(12);
-        return view('products.index', compact('products'));
+        $query = Product::query()->latest();
+        $categories = \App\Models\Category::orderBy('name')->pluck('name', 'slug')->toArray();
+
+        if (request('category')) {
+            $categoryParam = request('category');
+            $category = \App\Models\Category::where('slug', $categoryParam)
+                ->orWhere('name', $categoryParam)
+                ->first();
+            if ($category) {
+                $query->where('category_id', $category->id);
+            }
+        }
+
+        $products = $query->paginate(12)->withQueryString();
+        $categoryNames = \App\Models\Category::orderBy('name')->pluck('name')->toArray();
+        return view('products.index', [
+            'products' => $products,
+            'categories' => $categoryNames,
+        ]);
     }
 
     /**

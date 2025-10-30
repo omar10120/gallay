@@ -9,3 +9,13 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+:root{
+    --color-primary:#465048;
+    --color-accent:#BD906F;
+    --color-secondary:#C0B283;
+    --color-cream:#F3F1E5;
+    --color-primaryDark:#2B3330;
+    --color-accentDark:#A87A5B;
+    --color-secondaryDark:#9C8F6A;
+    --color-creamDark:#E8E6DA;
+}

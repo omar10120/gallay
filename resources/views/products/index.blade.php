@@ -1,46 +1,61 @@
 @extends('layouts.app')
 
-@section('title', 'Geally - Beautiful Images Gallery')
+@section('title', 'FastMenu - Beautiful Images Gallery')
 
 @section('content')
 <div id="gallery" class="py-12">
+    @include('partials.categories', ['categories' => $categories ?? []])
+    <div class="h-6"></div>
+    @if($products->count() > 0)
+        @include('partials.carousel', ['products' => $products])
+        <div class="h-8"></div>
+    @endif
    
 
     @if($products->count() > 0)
-        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             @foreach($products as $product)
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <div class="relative">
-                        @if($product->image)
-                            <a href="{{ route('products.show', $product) }}">
-                                <img src="{{ asset('storage/' . $product->image) }}" 
-                                     alt="{{ $product->name }}" 
-                                     class="w-full h-64 object-cover cursor-pointer">
-                            </a>
-                        @else
-                            <a href="{{ route('products.show', $product) }}">
-                                <div class="w-full h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center cursor-pointer">
-                                    <i class="fas fa-image text-gray-400 text-4xl"></i>
+                <div class="rounded-2xl border-2" style="border-color: var(--color-accent); background: rgba(0,0,0,0.06);">
+                    <div class="relative m-2 rounded-xl overflow-hidden" style="background: rgba(0,0,0,0.08);">
+                        <!-- <a href="{{ route('products.show', $product) }}" class="block"> -->
+                            @if($product->image)
+                                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-[460px] object-cover" />
+                            @else
+                                <div class="w-full h-[460px] bg-[color:var(--color-primary)]/30 flex items-center justify-center">
+                                    <i class="fas fa-image text-4xl text-[color:var(--color-secondaryDark)]"></i>
                                 </div>
+                            @endif
+                        <!-- </a> -->
+
+                        <div class="absolute left-4 -bottom-6 flex items-center gap-4">
+                            <a href="tel:#" class="w-12 h-12 rounded-full bg-white shadow flex items-center justify-center text-[color:var(--color-primaryDark)] hover:scale-105 transition">
+                                <i class="fa-solid fa-phone"></i>
                             </a>
-                        @endif
-                        
-                        <!-- Image count badge -->
-                        @if($product->images && count($product->images) > 0)
-                            <div class="absolute top-3 right-3 bg-black/70 text-white px-2 py-1 rounded-full text-xs">
-                                <i class="fas fa-images mr-1"></i>{{ count($product->images) + 1 }}
-                            </div>
-                        @endif
-                        
-                        <!-- Price badge -->
-                        <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-gray-800 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold">
-                            AED{{ number_format($product->price, 2) }}
+                            <a href="#" class="w-12 h-12 rounded-full bg-white shadow flex items-center justify-center text-green-600 hover:scale-105 transition">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-white shadow flex items-center justify-center text-[color:var(--color-primaryDark)] hover:scale-105 transition">
+                                <i class="fa-regular fa-share-from-square"></i>
+                            </a>
                         </div>
                     </div>
-                    
-                    <div class="p-3 sm:p-4">
-                        <h3 class="text-xs sm:text-sm font-semibold text-gray-800 mb-1">{{ $product->name }}</h3>
+
+                    <div class="px-4 pb-4 ">
+                        <div class="rounded-lg mb-2 flex justify-around items-center h-full p-2" style="background-color: var(--color-primaryDark);">
+                            <div class="  text-[color:var(--color-creamDark)] font-semibold flex items-center">
+                                <div class="uppercase tracking-wide">{{ number_format($product->price, 0) }} AED</div>
+                                <div class="opacity-90 text-sm">&nbsp;</div>
+                            </div>
+                             <div class=" text-[color:var(--color-creamDark)] font-semibol flex items-center">
+                                    <div class="uppercase tracking-wide">{{ $product->name }}</div>
+                                    <div class="opacity-90 text-sm">&nbsp;</div>
+                                </div>
+                        </div>
+                      
+                        
                     </div>
+                
+
                 </div>
             @endforeach
         </div>
@@ -59,9 +74,7 @@
             </div>
             <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">No Images Yet</h3>
             <p class="text-gray-600 mb-6 text-sm sm:text-base">Check back soon for our beautiful image collection!</p>
-            <a href="/admin/login" class="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base">
-                <i class="fas fa-cog mr-2"></i>Admin Panel
-            </a>
+        
         </div>
     @endif
 </div>

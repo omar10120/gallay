@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $product->name . ' - Geally')
+@section('title', $product->name . ' - FastMenu')
 
 @section('content')
 <div class="py-8">

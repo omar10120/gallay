@@ -1,0 +1,29 @@
+<?php
+
+return [
+    'workingHours' => 'ساعات العمل',
+    'hours' => '9 صباحاً - 11 مساءً',
+    'email' => 'البريد الإلكتروني',
+    'contact' => 'اتصل بنا',
+    'offers' => 'العروض',
+    'home' => 'الرئيسية',
+    'productDetails' => 'تفاصيل المنتج',
+    'editProduct' => 'تعديل المنتج',
+    'backToProducts' => 'العودة إلى المنتجات',
+    'confirmDeleteProduct' => 'هل أنت متأكد من حذف هذا المنتج؟ لا يمكن التراجع عن هذا الإجراء.',
+    'deleteProduct' => 'حذف المنتج',
+    'primaryImage' => 'الصورة الرئيسية',
+    'additionalImages' => 'الصور الإضافية',
+    'noImagesUploaded' => 'لا توجد صور مرفوعة',
+    'lastUpdated' => 'آخر تحديث',
+    'totalImages' => 'عدد الصور',
+    'created' => 'تم إنشاء',
+    'updated' => 'تم تحديث',
+    'createdAt' => 'تم إنشاء في',
+    'updatedAt' => 'تم تحديث في',
+    'createdBy' => 'تم إنشاء بواسطة',
+    'updatedBy' => 'تم تحديث بواسطة',
+    'createdBy' => 'تم إنشاء بواسطة',
+    'updatedBy' => 'تم تحديث بواسطة',
+];
+
