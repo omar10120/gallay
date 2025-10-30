@@ -39,9 +39,9 @@
                 <div class="swiper-slide">
                     <!-- <a href="{{ route('products.show', $product) }}" class="block"> -->
                         @if($product->image)
-                            <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-[400px] object-fit rounded-xl shadow" />
+                            <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-[520px] object-fit rounded-xl shadow" />
                         @else
-                            <div class="w-full h-[400px] bg-[color:var(--color-primary)]/30 rounded-xl flex items-center justify-center">
+                            <div class="w-full h-[520px] bg-[color:var(--color-primary)]/30 rounded-xl flex items-center justify-center">
                                 <i class="fas fa-image text-3xl text-[color:var(--color-secondaryDark)]"></i>
                             </div>
                         @endif

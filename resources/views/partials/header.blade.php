@@ -49,7 +49,7 @@
 
     <!-- Navigation row -->
     <div class="w-full border-t border-[color:var(--color-secondaryDark)]/30">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4" style="animation: fadeUp .5s ease-out .1s both;">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 relative" style="animation: fadeUp .5s ease-out .1s both;">
             <!-- Desktop icons -->
             <ul class="hidden md:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-6 text-center text-[color:var(--color-secondaryDark)]">
                 <li class="flex flex-col items-center gap-2 transition-transform hover:-translate-y-0.5">
@@ -96,7 +96,7 @@
             </ul>
 
             <!-- Mobile menu panel -->
-            <div id="mobileMenuPanel" class="md:hidden pointer-events-none opacity-0 -translate-y-2 mt-3 rounded-xl border border-[color:var(--color-secondaryDark)]/30 bg-[color:var(--color-primaryDark)]/95 backdrop-blur p-3 text-[color:var(--color-secondary)] transition-all duration-300">
+            <div id="mobileMenuPanel" class="md:hidden pointer-events-none opacity-0 -translate-y-2 absolute left-0 right-0 top-full rounded-xl border border-[color:var(--color-secondaryDark)]/30 bg-[color:var(--color-primaryDark)]/95 backdrop-blur p-3 text-[color:var(--color-secondary)] transition-all duration-300 z-50">
                 <div class="grid grid-cols-4 gap-3 text-center text-xs">
                     <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition text-[color:var(--color-secondary)]">
                         <i class="fa-regular fa-envelope "></i><span>{{ __('header.email') }}</span>
@@ -128,6 +128,7 @@
                     </div>
                 </div>
             </div>
+            <div id="mobileMenuSpacer" class="md:hidden h-0 transition-all duration-300"></div>
         </div>
     </div>
 </header>
@@ -138,19 +139,22 @@ document.addEventListener('DOMContentLoaded', function(){
   const panel = document.getElementById('mobileMenuPanel');
   const ham = document.getElementById('icon-ham');
   const closeIc = document.getElementById('icon-close');
+  const spacer = document.getElementById('mobileMenuSpacer');
   if(!btn || !panel) return;
   const open = () => {
     btn.setAttribute('aria-expanded', 'true');
-    panel.classList.remove('pointer-events-none','opacity-0','-translate-y-2');
-    panel.classList.add('pointer-events-auto','opacity-100','translate-y-0');
+    panel.classList.remove('pointer-events-none','opacity-0','-translate-y-2','absolute');
+    panel.classList.add('pointer-events-auto','opacity-100','translate-y-0','relative');
+    if (spacer) spacer.style.height = '0px';
     ham.classList.add('scale-0','-rotate-45');
     closeIc.classList.remove('scale-0');
     closeIc.classList.add('scale-100');
   };
   const close = () => {
     btn.setAttribute('aria-expanded', 'false');
-    panel.classList.add('pointer-events-none','opacity-0','-translate-y-2');
-    panel.classList.remove('pointer-events-auto','opacity-100','translate-y-0');
+    panel.classList.add('pointer-events-none','opacity-0','-translate-y-2','absolute');
+    panel.classList.remove('pointer-events-auto','opacity-100','translate-y-0','relative');
+    if (spacer) spacer.style.height = '0px';
     ham.classList.remove('scale-0','-rotate-45');
     closeIc.classList.add('scale-0');
     closeIc.classList.remove('scale-100');
