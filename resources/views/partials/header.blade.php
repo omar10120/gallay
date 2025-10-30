@@ -48,7 +48,7 @@
     </div>
 
     <!-- Navigation row -->
-    <div class="w-full border-t border-[color:var(--color-secondaryDark)]/30">
+    <div class="w-full  border-[color:var(--color-secondaryDark)]/30">
         <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 relative" style="animation: fadeUp .5s ease-out .1s both;">
             <!-- Desktop icons -->
             <ul class="hidden md:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-6 text-center text-[color:var(--color-secondaryDark)]">
