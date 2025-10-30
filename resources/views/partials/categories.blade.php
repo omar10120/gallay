@@ -13,7 +13,7 @@
             @php($isActive = ($cat === 'All' && ($active==='All' || !$active)) || ($slugify($cat) === strtolower($active)))
             @php($param = $cat === 'All' ? null : $slugify($cat))
             <a href="{{ $param ? url()->current() . '?category=' . $param : url()->current() }}"
-               class="px-4 py-2 rounded-full border transition font-medium"
+               class="px-4 py-2 rounded-md border transition font-medium"
                style="
                     border-color: var(--color-accent);
                     color: {{ $isActive ? 'var(--color-creamDark)' : 'var(--color-creamDark)' }};

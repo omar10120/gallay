@@ -7,9 +7,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     @if(app()->getLocale()==='ar')
-        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
     @else
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     @endif
     <style>
         :root{
@@ -22,7 +26,7 @@
             --color-secondaryDark:#9C8F6A;
             --color-creamDark:#E8E6DA;
         }
-        body{ font-family: {{ app()->getLocale()==='ar' ? "'Cairo', sans-serif" : "'Inter', sans-serif" }}; background-color:#465048; }
+        body{ font-family: {{ app()->getLocale()==='ar' ? "'Cairo', sans-serif" : "'Montserrat', 'Cairo', sans-serif" }}; background-color:#465048; }
     </style>
 </head>
 <body>

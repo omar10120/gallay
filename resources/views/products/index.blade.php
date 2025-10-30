@@ -15,11 +15,11 @@
     @if($products->count() > 0)
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             @foreach($products as $product)
-                <div class="rounded-2xl border-2" style="border-color: var(--color-accent); background: rgba(0,0,0,0.06);">
-                    <div class="relative m-2 rounded-xl overflow-hidden" style="background: rgba(0,0,0,0.08);">
+                <div class="" style=" background: rgba(0,0,0,0.06);">
+                    <div class="relative group m-2 rounded-xl overflow-hidden" style="background: rgba(0,0,0,0.08);">
                         <!-- <a href="{{ route('products.show', $product) }}" class="block"> -->
                             @if($product->image)
-                                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-[460px] object-cover" />
+                                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-[400px] object-cover" />
                             @else
                                 <div class="w-full h-[460px] bg-[color:var(--color-primary)]/30 flex items-center justify-center">
                                     <i class="fas fa-image text-4xl text-[color:var(--color-secondaryDark)]"></i>
@@ -27,14 +27,15 @@
                             @endif
                         <!-- </a> -->
 
-                        <div class="absolute left-4 -bottom-6 flex items-center gap-4">
-                            <a href="tel:#" class="w-12 h-12 rounded-full bg-white shadow flex items-center justify-center text-[color:var(--color-primaryDark)] hover:scale-105 transition">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 flex items-center gap-3">
+                            <a href="tel:#" class="w-11 h-11 rounded-full bg-white/90 backdrop-blur ring-2 ring-[color:var(--color-accent)]/50 shadow flex items-center justify-center text-[color:var(--color-primaryDark)] hover:scale-105 transition">
                                 <i class="fa-solid fa-phone"></i>
                             </a>
-                            <a href="#" class="w-12 h-12 rounded-full bg-white shadow flex items-center justify-center text-green-600 hover:scale-105 transition">
+                            <a href="#" class="w-11 h-11 rounded-full bg-white/90 backdrop-blur ring-2 ring-[color:var(--color-accent)]/50 shadow flex items-center justify-center text-green-600 hover:scale-105 transition">
                                 <i class="fa-brands fa-whatsapp"></i>
                             </a>
-                            <a href="#" class="w-12 h-12 rounded-full bg-white shadow flex items-center justify-center text-[color:var(--color-primaryDark)] hover:scale-105 transition">
+                            <a href="#" class="w-11 h-11 rounded-full bg-white/90 backdrop-blur ring-2 ring-[color:var(--color-accent)]/50 shadow flex items-center justify-center text-[color:var(--color-primaryDark)] hover:scale-105 transition">
                                 <i class="fa-regular fa-share-from-square"></i>
                             </a>
                         </div>

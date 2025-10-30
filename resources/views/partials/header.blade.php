@@ -1,4 +1,4 @@
-<header class="w-full bg-[color:var(--color-primaryDark)] text-[color:var(--color-creamDark)] border-b border-[color:var(--color-primary)]">
+<header class="w-full bg-[color:var(--color-primaryDark)] text-[color:var(--color-secondary)] border-b border-[color:var(--color-primary)]">
     <style>
         @keyframes fadeDown { from { opacity: 0; transform: translateY(-8px);} to { opacity: 1; transform: translateY(0);} }
         @keyframes fadeUp { from { opacity: 0; transform: translateY(8px);} to { opacity: 1; transform: translateY(0);} }
@@ -31,7 +31,7 @@
             </div>
 
             <!-- Mobile hamburger -->
-            <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-[color:var(--color-secondaryDark)]/40 text-[color:var(--color-creamDark)] hover:bg-[color:var(--color-primary)] transition">
+            <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-[color:var(--color-secondaryDark)]/40 text-[color:var(--color-secondary)] hover:bg-[color:var(--color-primary)] transition">
                 <svg id="hamburgerIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -77,8 +77,8 @@
                     <i class="fa-solid fa-globe text-xl cursor-pointer"></i>
                     <div class="text-sm cursor-pointer">{{ strtoupper(app()->getLocale()) }}</div>
                     <div class="absolute top-full mt-2 bg-[color:var(--color-primaryDark)] border border-[color:var(--color-accent)] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 min-w-[80px]">
-                        <a href="{{ route('lang.switch', 'en') }}" class="block px-4 py-2 hover:bg-[color:var(--color-accent)] text-[color:var(--color-creamDark)] text-sm {{ app()->getLocale() === 'en' ? 'bg-[color:var(--color-accent)]/50' : '' }}">EN</a>
-                        <a href="{{ route('lang.switch', 'ar') }}" class="block px-4 py-2 hover:bg-[color:var(--color-accent)] text-[color:var(--color-creamDark)] text-sm {{ app()->getLocale() === 'ar' ? 'bg-[color:var(--color-accent)]/50' : '' }}">AR</a>
+                        <a href="{{ route('lang.switch', 'en') }}" class="block px-4 py-2 hover:bg-[color:var(--color-accent)] text-[color:var(--color-secondary)] text-sm {{ app()->getLocale() === 'en' ? 'bg-[color:var(--color-accent)]/50' : '' }}">EN</a>
+                        <a href="{{ route('lang.switch', 'ar') }}" class="block px-4 py-2 hover:bg-[color:var(--color-accent)] text-[color:var(--color-secondary)] text-sm {{ app()->getLocale() === 'ar' ? 'bg-[color:var(--color-accent)]/50' : '' }}">AR</a>
                     </div>
                 </li>
                 <li class="flex flex-col items_center gap-2 transition-transform hover:-translate-y-0.5">
@@ -88,32 +88,32 @@
             </ul>
 
             <!-- Mobile menu panel -->
-            <div id="mobileMenuPanel" class="md:hidden hidden mt-3 rounded-xl border border-[color:var(--color-secondaryDark)]/30 bg-[color:var(--color-primaryDark)]/80 backdrop-blur p-3 text-[color:var(--color-creamDark)]">
+            <div id="mobileMenuPanel" class="md:hidden hidden mt-3 rounded-xl border border-[color:var(--color-secondaryDark)]/30 bg-[color:var(--color-primaryDark)]/80 backdrop-blur p-3 text-[color:var(--color-secondary)]">
                 <div class="grid grid-cols-4 gap-3 text-center text-xs">
-                    <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition">
-                        <i class="fa-regular fa-envelope"></i><span>{{ __('header.email') }}</span>
+                    <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition text-[color:var(--color-secondary)]">
+                        <i class="fa-regular fa-envelope "></i><span>{{ __('header.email') }}</span>
                     </a>
-                    <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition">
+                    <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition text-[color:var(--color-secondary)]">
                         <i class="fa-brands fa-snapchat"></i><span>{{ __('header.snapchat') }}</span>
                     </a>
-                    <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition">
+                    <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition text-[color:var(--color-secondary)]">
                         <i class="fa-brands fa-instagram"></i><span>{{ __('header.instagram') }}</span>
                     </a>
-                    <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition">
+                    <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition text-[color:var(--color-secondary)]">
                         <i class="fa-brands fa-whatsapp"></i><span>{{ __('header.whatsapp') }}</span>
                     </a>
-                    <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition">
-                        <i class="fa-brands fa-facebook-f"></i><span>Facebook</span>
+                    <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition text-[color:var(--color-secondary)]">
+                        <i class="fa-brands fa-facebook-f"></i><span>{{ __('header.facebook') }}</span>
                     </a>
-                    <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition">
+                    <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition text-[color:var(--color-secondary)]">
                         <i class="fa-solid fa-phone"></i><span>{{ __('common.contact') }}</span>
                     </a>
-                    <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition">
+                    <a href="#" class="flex flex-col items-center gap-1 py-2 rounded-lg hover:bg-[color:var(--color-primary)] transition text-[color:var(--color-secondary)]">
                         <i class="fa-solid fa-percent"></i><span>{{ __('common.offers') }}</span>
                     </a>
                     <div class="flex flex-col items-center gap-1 py-2 rounded-lg">
                         <i class="fa-solid fa-globe"></i>
-                        <div class="flex gap-2 text-[color:var(--color-creamDark)]">
+                        <div class="flex gap-2 text-[color:var(--color-secondary)]">
                             <a class="underline" href="{{ route('lang.switch', 'en') }}">EN</a>
                             <a class="underline" href="{{ route('lang.switch', 'ar') }}">AR</a>
                         </div>
