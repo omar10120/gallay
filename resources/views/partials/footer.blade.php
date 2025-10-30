@@ -15,7 +15,7 @@
             </div>
             <div class="flex items-center gap-3">
                 <i class="fa-solid fa-phone-volume text-[color:var(--color-accent)]"></i>
-                <span>+86 136 1000 9048</span>
+                <span dir="ltr">+86 136 1000 9048</span>
             </div>
         </div>
 
