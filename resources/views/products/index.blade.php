@@ -68,12 +68,12 @@
         @endif
     @else
         <!-- Empty state -->
-        <div class="text-center py-16">
-            <div class="w-20 h-20 sm:w-24 sm:h-24 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i class="fas fa-images text-gray-400 text-2xl sm:text-3xl"></i>
+        <div class="text-center py-16 text-[color:var(--color-creamDark)]">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 bg-[color:var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-images text-[color:var(--color-creamDark)] text-2xl sm:text-3xl"></i>
             </div>
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">No Images Yet</h3>
-            <p class="text-gray-600 mb-6 text-sm sm:text-base">Check back soon for our beautiful image collection!</p>
+            <h3 class="text-lg sm:text-xl font-semibold text-[color:var(--color-creamDark)] mb-2">{{ __('common.noImagesYet') }}</h3>
+            <p class="text-[color:var(--color-creamDark)] mb-6 text-xs sm:text-sm">{{ __('common.checkBackSoon') }}</p>
         
         </div>
     @endif

@@ -40,5 +40,7 @@ return [
     'back' => 'Back',
     'slug' => 'Slug',
     'createCategory' => 'Create Category',
+    'noImagesYet' => 'No Images Yet',
+    'checkBackSoon' => 'Check back soon for our beautiful image collection!',
 ];
 

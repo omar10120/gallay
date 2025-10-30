@@ -1,6 +1,6 @@
 <footer class="mt-16" style="background-color:#465048; color: var(--color-creamDark);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-        <h2 class="text-lg sm:text-xl lg:text-xl font-semibold leading-relaxed mb-8">
+        <h2 class="text-sm sm:text-base lg:text-base leading-relaxed mb-8">
             {{ __('footer.tagline') }}
         </h2>
 
