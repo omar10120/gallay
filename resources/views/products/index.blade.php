@@ -19,7 +19,7 @@
                     <div class="relative group m-2 rounded-xl overflow-hidden" style="background: rgba(0,0,0,0.08);">
                         <!-- <a href="{{ route('products.show', $product) }}" class="block"> -->
                             @if($product->image)
-                                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-[500px] md:h-[520px] object-fit" />
+                                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-[520px] md:h-[480px] object-fit" />
                             @else
                                 <div class="w-full h-[460px] bg-[color:var(--color-primary)]/30 flex items-center justify-center">
                                     <i class="fas fa-image text-4xl text-[color:var(--color-secondaryDark)]"></i>
