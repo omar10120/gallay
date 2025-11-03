@@ -11,7 +11,7 @@
             </div>
             <div class="flex items-center gap-3">
                 <i class="fa-regular fa-envelope text-[color:var(--color-accent)]"></i>
-                <span>fastmenus@gmail.com</span>
+                <span>info@mm8market.com</span>
             </div>
             <div class="flex items-center gap-3">
                 <i class="fa-solid fa-phone-volume text-[color:var(--color-accent)]"></i>

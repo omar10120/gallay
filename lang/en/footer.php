@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'tagline' => 'Our Traditional Foods and Desserts - We fulfill your orders and strive to offer the best and most delicious for everyone',
-    'address' => 'Address: Dubai',
+    'tagline' => 'Our website takes you on a journey through the most beautiful handbag designs from the latest collections around the world. From sophisticated classic pieces to bold modern creations — every image tells a story of refined taste and irresistible elegance. Browse effortlessly and find inspiration for your next look in a carefully curated selection that suits every occasion and every style.Because a handbag is not just an accessory… it’s the touch of elegance that completes your personality. 💼',
+    'address' => 'Address: Macau',
     'allRightsReserved' => 'All Rights Reserved',
     'directedBy' => 'Directed by',
     'productDetails' => 'Product Details',
