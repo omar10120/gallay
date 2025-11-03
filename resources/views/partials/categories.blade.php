@@ -8,12 +8,12 @@
 @endphp
 
 <div class="w-full overflow-hidden">
-    <div class="flex md:flex-wrap gap-2 sm:gap-3 items-center overflow-x-auto scrollbar-hide px-2 md:px-0 md:justify-center pb-2 md:pb-0">
+    <div class="flex flex-wrap md:flex-wrap gap-2 sm:gap-3 items-center overflow-x-auto md:overflow-x-visible scrollbar-hide px-2 md:px-0 md:justify-center pb-2 md:pb-0">
         @foreach($list as $cat)
             @php($isActive = ($cat === 'All' && ($active==='All' || !$active)) || ($slugify($cat) === strtolower($active)))
             @php($param = $cat === 'All' ? null : $slugify($cat))
             <a href="{{ $param ? url()->current() . '?category=' . $param : url()->current() }}"
-               class="relative px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg border font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:ring-2 hover:ring-[color:var(--color-accent)]/80 backdrop-blur-sm whitespace-nowrap flex-shrink-0"
+               class="relative px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg border text-xs sm:text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:ring-2 hover:ring-[color:var(--color-accent)]/80 backdrop-blur-sm whitespace-nowrap flex-shrink-0"
                style="
                     border-color: var(--color-accent);
                     color: {{ $isActive ? 'var(--color-creamDark)' : 'var(--color-creamDark)' }};
